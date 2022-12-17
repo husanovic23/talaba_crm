@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+
+{% block title %}
+
+{{student.name}}  {{student.l_name}}
+
+{% endblock %}
+
+{% block content %}
+
+<h1> Talaba ismi: {{student.name}}</h1> <br>
+<h1> Talaba familiyasi: {{student.l_name}}</h1> <br>
+<h1> Talaba Yoshi : {{student.age}}</h1> <br>
+<h1> Talaba Vatani : {{student.country}}</h1> <br>
+<h1> Talaba Viloyati : {{student.region}}</h1> <br>
+<h1> Talaba Guruhi : {{student.group}}</h1> <br>
+<h1> Talaba Idsi : {{student.talaba_raqami}}</h1>
+
+{% endblock %}

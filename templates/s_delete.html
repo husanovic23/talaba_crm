@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+{% block title %}
+
+Talaba kiritish
+
+{% endblock %}
+
+
+
+{% block content %}
+<div class = "container">
+    <div class = "row"> 
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+           
+            <form method="post">
+                {% csrf_token%}
+    
+                <div class="form-group">
+                    <h1>{{student.name}} ismli talabani o'chirasizmi</h1>
+          
+            <button type="submit" class="btn btn-danger">Ha</button>
+           <a href="/"> <button type="button" class="btn btn-primary">Yo'q</button></a>
+
+                </form>
+            
+            </div>
+        <div class="col-md-3" ></div>
+        
+
+        
+    
+    
+        </div>
+
+
+
+{% endblock %}
+

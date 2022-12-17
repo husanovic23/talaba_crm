@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+{% block title %}
+
+{{student.name}}  {{student.l_name}}
+
+{% endblock %}
+
+
+
+{% block content %}
+<div class = "container">
+    <div class = "row"> 
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+           
+            <form method="post">
+                {% csrf_token%}
+                
+            
+                <div class="form-group">
+              <label >Ism</label>
+              {{form.name|attr:"type:text"|add_class:"form-control"|attr:"placeholder:Sardor"}}
+              <small id="emailHelp" class="form-text text-muted">Ismingiz passport bo'yicha</small>
+              
+              <label for="">Familiya</label>
+              {{form.l_name|attr:"type:text"|add_class:"form-control"|attr:"placeholder:Abdullayev"}}
+              <small id="emailHelp" class="form-text text-muted">Familiyangiz passport bo'yicha</small>
+              
+              <label for="">Yosh</label>
+              {{form.age|attr:"type:number"|add_class:"form-control"|attr:"placeholder:21"}}
+              <small id="emailHelp" class="form-text text-muted"></small>
+
+              <label for="">Vatani</label>
+              {{form.country|attr:"type:text"|add_class:"form-control"|attr:"placeholder:Uzbekistan"}}
+              <small id="emailHelp" class="form-text text-muted"></small>
+
+              <label for="">Viloyati</label>
+              {{form.region|attr:"type:text"|add_class:"form-control"|attr:"placeholder:Samarqand"}}
+              <small id="emailHelp" class="form-text text-muted"></small>
+
+              <label for="">Guruhi</label>
+              {{form.group|attr:"type:number"|add_class:"form-control"|attr:"placeholder:220"}}
+              <small  class="form-text text-muted"></small>
+
+              <label for="">Talaba raqami</label>
+              {{form.talaba_raqami|attr:"type:number"|add_class:"form-control"|attr:"placeholder:1"}}
+              <small  class="form-text text-muted"></small>
+            
+            </div>
+          
+            <button type="submit" class="btn btn-primary">Yuborish</button>
+                </form>
+            
+            </div>
+        <div class="col-md-3" ></div>
+        
+
+        
+    
+    
+        </div>
+
+
+
+{% endblock %}
+
